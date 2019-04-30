@@ -6,129 +6,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reproductor</title>
+    <link rel="stylesheet" href="./sass/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main>
-        <form action="#">
-            <div>
-                <button type="submit">(lupa para buscar)</button>
-                <input type="search" id="search" placeholder="Type here to search">
+    <div class="grid">
+        <main class="main">
+            <form action="#" class="form">
+                <div class="form_group">
+                    <button type="submit" class="btn btn--search"><i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    <input class="form__control" type="search" id="search" placeholder="Type here to search">
+                </div>
+            </form>
+            <header class="header">
+                <button type="button" class="btn btn--favorites">
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="640" height="640">
+                        <defs>
+                            <path
+                                d="M65.45 32.92L100 38.2 75 63.82 80.9 100 50 82.92 19.1 100 25 63.82 0 38.2l34.55-5.28L50 0l15.45 32.92z"
+                                id="a" />
+                        </defs>
+                        <use xlink:href="#a" />
+                        <use xlink:href="#a" fill-opacity="0" stroke="#90c72a" stroke-width="0" />
+                    </svg>
+                    Save to My stars</button>
+                <h1 class="header__heading">Gorillaz</h1>
+                <ul class="header__info">
+                    <li class="header__link"><a class="selected" href="#">Albums</a></li>
+                    <li class="header__link"><a class="" href="#">About</a></li>
+                    <li class="header__link"><a class="" href="#">Related artists</a></li>
+                </ul>
+            </header>
+            <div class="galery">
+                <ul class="galery__list">
+                    <li class="galery__item">
+                        <img class="galery__media" src="img/01.jpg" alt="">
+                        Humanz (Deluxe)
+                        <span class="galery__text">2017</span>
+                    </li>
+                    <li class="galery__item">
+                        <img class="galery__media" src="img/02.png" alt="">
+                        Plastic Beach
+                        <span class="galery__text">2010</span>
+                    </li>
+                    <li class="galery__item">
+                        <img class="galery__media" src="img/03.jpg" alt="">
+                        The fall
+                        <span class="galery__text">2010</span>
+                    </li>
+                    <li class="galery__item">
+                        <img class="galery__media" src="img/01.jpg" alt="">
+                        Humanz (Deluxe)
+                        <span class="galery__text">2017</span>
+                    </li>
+                    <li class="galery__item">
+                        <img class="galery__media" src="img/02.png" alt="">
+                        Plastic Beach
+                        <span class="galery__text">2010</span>
+                    </li>
+                    <li class="galery__item">
+                        <img class="galery__media" src="img/03.jpg" alt="">
+                        The fall
+                        <span class="galery__text">2010</span>
+                    </li>
+                </ul>
             </div>
-        </form>
-        <div class="user online">
-            <span>Andrew Z</span>
-            <img src="..." alt="Imagen del usuario">
-            <span title="Punto azul cuando el usuario esta online">(icono)</span>
-        </div>
 
-        <header>
-            <button type="button"><span>(icono estrella)</span>Save to My stars</button>
-            <h1>Gorillaz</h1> <!-- Se pintaria en funcion de la pagina de artista en la que estemos -->
-            <ul>
-                <li><a href="#" class="selected">Albums</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Related artists</a></li>
+        </main>
+
+        <nav class="navbar">
+            <div class="navbar__menu">
+                <a href="#" class="navbar__media"></a>
+                <button type="button" class="btn btn--nav">
+                    <span class="bars"></span>
+                </button>
+            </div>
+            <h2 class="navbar__heading">Music</h2>
+            <ul class="menu">
+                <li class="menu__item"><a href="#" class="menu__link">Discover</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Rising</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Inspiration</a></li>
+                <li class="menu__item margin-bottom"><a href="#" class="menu__link">My stars</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Songs</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Artist</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Albums</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Radio</a></li>
             </ul>
-        </header>
-        <div class="albums">
-            <ul>
-                <li>
-                    <img src="..." alt="">
-                    Humanz (Deluxe)
-                    <span>2017</span>
+            <div class="flex">
+                <h2 class="navbar__heading">Playlists</h2>
+                <button type="button" class="btn btn--add">
+                    <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
+                    <span class="plus" aria-hidden="true"></span>
+                </button>
+            </div>
+            <ul class="menu">
+                <li class="menu__item"><a href="#" class="menu__link item-selected--green">UPlabs
+                        focus</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Golden 80s</a></li>
+                <li class="menu__item"><a href="#" class="menu__link item-selected--orange">Gaming OSTs Playlist
+                        title</a>
                 </li>
-                <li>
-                    <img src="..." alt="">
-                    Plastic Beach
-                    <span>2010</span>
-                </li>
-                <li>
-                    <img src="..." alt="">
-                    The fall
-                    <span>2010</span>
+                <li class="menu__item"><a href="#" class="menu__link item-selected--purple">Smash it!</a>
                 </li>
             </ul>
-        </div>
+        </nav>
 
-    </main>
+        <aside class="list-media">
+            <div class="user">
+                <span class="user__name">Andrew Z</span>
+                <img class="user__avatar online" src="img/user.jpg" alt="Imagen del usuario">
+            </div>
+            <h3 class="list-media__heading">Random selection</h3>
+            <ul>
+                <li class="list-media__item">Feel Good Inc <span class="list-media__length">3:43</span>
+                    <span class="list-media__detail">Demon Days</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item">Humility (feat. George Benson) <span class="list-media__length">3:17</span>
+                    <span class="list-media__detail">Fire Flies</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item">Clint Eastwood <span class="list-media__length">5:40</span>
+                    <span class="list-media__detail">Gorillaz</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item play">On Melancholy Hill<span class="list-media__length">3:53</span>
+                    <span class="list-media__detail">Demon Days</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item">Feel Good Inc <span class="list-media__length">3:43</span>
+                    <span class="list-media__detail">Demon Days</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item">Feel Good Inc <span class="list-media__length">3:43</span>
+                    <span class="list-media__detail">Demon Days</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item">Feel Good Inc <span class="list-media__length">3:43</span>
+                    <span class="list-media__detail">Demon Days</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item">Humility (feat. George Benson) <span class="list-media__length">3:17</span>
+                    <span class="list-media__detail">Fire Flies</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+                <li class="list-media__item">Clint Eastwood <span class="list-media__length">5:40</span>
+                    <span class="list-media__detail">Gorillaz</span>
+                    <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
+                </li>
+            </ul>
+        </aside>
+    </div>
 
-    <nav>
-        <div>
-            <a href="#"><img src="..." alt=""></a>
-            <button type="button">icono</button>
-        </div>
-        <h2>Music</h2>
-        <ul>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Rising</a></li>
-            <li><a href="#">Inspiration</a></li>
-            <li><a href="#">My stars</a></li>
-            <li class="margin"><a href="#">Songs</a></li>
-            <li><a href="#">Artist</a></li>
-            <li><a href="#">Albums</a></li>
-            <li><a href="#">Radio</a></li>
-
-        </ul>
-        <h2>Playlists</h2>
-        <button type="button">icono</button>
-        <ul>
-            <li><a href="#">UPlabs focus</a></li>
-            <li><a href="#">Golden 80s</a></li>
-            <li><a href="#">Gaming OSTs Playlist title</a></li>
-            <li><a href="#">Smash it!</a></li>
-        </ul>
-    </nav>
-
-    <aside>
-        <h3>Random selection</h3>
-        <ul>
-            <li>Feel Good Inc <span class="duracion">3:43</span>
-                <span class="cancion">Demon Days</span>
-            </li>
-            <li>Humility (feat. George Benson) <span class="duracion">3:17</span>
-                <span class="cancion">Fire Flies</span>
-            </li>
-            <li>Clint Eastwood <span class="duracion">5:40</span>
-                <span class="cancion">Gorillaz</span>
-            </li>
-            <li class="play">On Melancholy Hill <span>(barras frecuencias)</span> <span class="duracion">3:53</span>
-                <span class="cancion">Demon Days</span><button type="button">(icono mas)</button>
-            </li>
-            <li>Feel Good Inc <span class="duracion">3:43</span>
-                <span class="cancion">Demon Days</span>
-            </li>
-            <li>Feel Good Inc <span class="duracion">3:43</span>
-                <span class="cancion">Demon Days</span>
-            </li>
-        </ul>
-    </aside>
-
-    <footer>
-        <div>
-            <img src="..." alt="">
-            <span>Rhinestone Eyes <span>Gorillaz</span></span>
+    <footer class="player">
+        <div class="player__item">
+            <img class="player__media" src="..." alt="">
+            <span class="player__title">Rhinestone Eyes <span class="player__detail">Gorillaz</span></span>
         </div>
         <div class="controls">
-            <button type="button">(icono aleatorio)</button>
-            <button type="button">(icono cancion anterior)</button>
-            <button type="button">(icono pause)</button>
-            <button type="button">(icono cancion siguiente)</button>
-            <button type="button" class="control-active">(icono repetir)</button>
+            <button type="button" class="btn btn--player">(icono aleatorio)</button>
+            <button type="button" class="btn btn--player">(icono cancion anterior)</button>
+            <button type="button" class="btn btn--player">(icono pause)</button>
+            <button type="button" class="btn btn--player">(icono cancion siguiente)</button>
+            <button type="button" class="btn btn--player btn--active">(icono repetir)</button>
         </div>
-        <div>
-            <button type="button">(icono altavoz)</button>
-            <input type="range" id="" min="0" max="100" step="1">
+        <div class="controls controls--range">
+            <button type="button" class="btn btn--player">(icono altavoz)</button>
+            <input class="player__range" type="range" id="" min="0" max="100" step="1">
         </div>
-        <div>
-            <span>(progreso de la cancion)</span>
-            <div class="barra">
-                <div class="barra-progreso"></div>
+        <div class="controls controls--progress">
+            <span class="controls--progress__detail">(progreso de la cancion)</span>
+            <div class="controls--progress__bar">
+                <div class="controls--progress__bar--completed"></div>
             </div>
-            <span>(duracion de la cancion)</span>
+            <span class="controls--progress__detail">(duracion de la cancion)</span>
         </div>
-        <button type="button">icono</button>
-        <button type="button">icono</button>
+        <button type="button" class="btn btn--player">icono</button>
+        <button type="button" class="btn btn--player">icono</button>
     </footer>
 </body>
 
