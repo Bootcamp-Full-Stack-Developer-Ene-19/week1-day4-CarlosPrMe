@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reproductor</title>
     <link rel="stylesheet" href="./sass/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -36,7 +36,7 @@
                     Save to My stars</button>
                 <h1 class="header__heading">Gorillaz</h1>
                 <ul class="header__info">
-                    <li class="header__link"><a class="selected" href="#">Albums</a></li>
+                    <li class="header__link"><a class="" href="#">Albums</a></li>
                     <li class="header__link"><a class="" href="#">About</a></li>
                     <li class="header__link"><a class="" href="#">Related artists</a></li>
                 </ul>
@@ -99,18 +99,19 @@
             <div class="flex">
                 <h2 class="navbar__heading">Playlists</h2>
                 <button type="button" class="btn btn--add">
-                    <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
                     <span class="plus" aria-hidden="true"></span>
                 </button>
             </div>
             <ul class="menu">
-                <li class="menu__item"><a href="#" class="menu__link item-selected--green">UPlabs
+                <li class="menu__item"><span class="item-selected item-selected--green"></span><a href="#"
+                        class="menu__link">UPlabs
                         focus</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Golden 80s</a></li>
-                <li class="menu__item"><a href="#" class="menu__link item-selected--orange">Gaming OSTs Playlist
-                        title</a>
-                </li>
-                <li class="menu__item"><a href="#" class="menu__link item-selected--purple">Smash it!</a>
+                <li class="menu__item"><span class=""></span><a href="#" class="menu__link">Golden 80s</a></li>
+                <li class="menu__item"><span class="item-selected item-selected--orange"></span><a href="#"
+                        class="menu__link">Gaming OSTs</a></li>
+                <li class="menu__item"><span class=""></span><a href="#" class="menu__link">Playlist title</a></li>
+                <li class="menu__item"><span class="item-selected item-selected--purple"></span><a href="#"
+                        class="menu__link">Smash it!</a>
                 </li>
             </ul>
         </nav>
@@ -134,7 +135,14 @@
                     <span class="list-media__detail">Gorillaz</span>
                     <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
                 </li>
-                <li class="list-media__item play">On Melancholy Hill<span class="list-media__length">3:53</span>
+                <li class="list-media__item selected-song">On Melancholy Hill
+                    <span class="playing">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                        <span class="bar bar3"></span>
+                        <span class="bar bar4"></span>
+                    </span>
+                    <span class="list-media__length">3:53</span>
                     <span class="list-media__detail">Demon Days</span>
                     <button type="button" class="btn btn--add"><span class="plus" aria-hidden="true"></span></button>
                 </li>
@@ -164,29 +172,44 @@
 
     <footer class="player">
         <div class="player__item">
-            <img class="player__media" src="..." alt="">
-            <span class="player__title">Rhinestone Eyes <span class="player__detail">Gorillaz</span></span>
+            <img class="player__media" src="img/plastic_beach.jpg" alt="">
+            <span class="player__info">
+                <span class="player__title">Rhinestone Eyes</span>
+                <a href="#" class="player__detail">Gorillaz</a>
+            </span>
         </div>
         <div class="controls">
-            <button type="button" class="btn btn--player">(icono aleatorio)</button>
-            <button type="button" class="btn btn--player">(icono cancion anterior)</button>
-            <button type="button" class="btn btn--player">(icono pause)</button>
-            <button type="button" class="btn btn--player">(icono cancion siguiente)</button>
-            <button type="button" class="btn btn--player btn--active">(icono repetir)</button>
+            <button type="button" class="btn btn--player"><i class="fa fa-random" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn--player"><i class="fa fa-step-backward"
+                    aria-hidden="true"></i></button>
+            <button type="button" class="btn btn--player rounded"><i class="fa fa-pause"
+                    aria-hidden="true"></i></button>
+            <button type="button" class="btn btn--player"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn--player btn--active"><i class="fa fa-repeat"
+                    aria-hidden="true"></i></button>
         </div>
-        <div class="controls controls--range">
-            <button type="button" class="btn btn--player">(icono altavoz)</button>
-            <input class="player__range" type="range" id="" min="0" max="100" step="1">
+        <div class="controls-range">
+            <button type="button" class="btn btn--player"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+            <span class="controls-range__group">
+                <span class="player__range"></span>
+            </span>
         </div>
-        <div class="controls controls--progress">
-            <span class="controls--progress__detail">(progreso de la cancion)</span>
-            <div class="controls--progress__bar">
-                <div class="controls--progress__bar--completed"></div>
+        <div class="controls-progress">
+            <span class="controls-progress__detail">2:54</span>
+            <div class="controls-progress__group">
+                <div class="controls-progress__bar"></div>
             </div>
-            <span class="controls--progress__detail">(duracion de la cancion)</span>
+            <span class="controls-progress__detail">4:03</span>
         </div>
-        <button type="button" class="btn btn--player">icono</button>
-        <button type="button" class="btn btn--player">icono</button>
+        <div class="controls-aditionals">
+                <button type="button" class="btn btn--player"><svg class="podcast" xmlns="http://www.w3.org/2000/svg"
+                        width="17" height="12" viewBox="0 0 17 12">
+                        <path fill="#A1A4B2" fill-rule="nonzero"
+                            d="M2.224 1.218a.92.92 0 0 1 1.3.003.92.92 0 0 1 .004 1.3c-2.148 2.15-2.139 5.643.022 7.803a.92.92 0 0 1 .004 1.3.92.92 0 0 1-1.3-.003c-2.882-2.88-2.895-7.538-.03-10.403zm2.52 1.838a.92.92 0 0 1 1.301.004.92.92 0 0 1 .004 1.3 2.759 2.759 0 0 0 .01 3.902.92.92 0 0 1 .004 1.3.92.92 0 0 1-1.3-.003c-1.8-1.8-1.809-4.712-.018-6.503zm9.814 8.569a.92.92 0 0 1-1.3-.004.92.92 0 0 1-.004-1.3c2.148-2.149 2.139-5.642-.022-7.803a.92.92 0 0 1-.004-1.3.92.92 0 0 1 1.3.003c2.882 2.881 2.895 7.539.03 10.404zm-2.534-2.063a.92.92 0 0 1-1.3-.003.92.92 0 0 1-.004-1.3 2.759 2.759 0 0 0-.011-3.902.92.92 0 0 1-.004-1.3.92.92 0 0 1 1.3.003c1.801 1.8 1.81 4.712.019 6.502zM8.39 8.312a1.84 1.84 0 0 1-1.834-1.844 1.84 1.84 0 0 1 1.834-1.845 1.84 1.84 0 0 1 1.834 1.845 1.84 1.84 0 0 1-1.834 1.844z" />
+                    </svg>
+                </button>
+                <button type="button" class="btn btn--player"><i class="fa fa-list" aria-hidden="true"></i></button>
+            </div>
     </footer>
 </body>
 
