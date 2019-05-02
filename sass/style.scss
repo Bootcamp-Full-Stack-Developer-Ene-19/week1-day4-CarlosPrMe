@@ -129,13 +129,15 @@ table {
 VARS
 ------------------------------*/
 $color-primary: #fff;
-$color-secondary: #b4cff2;
+$color-secondary: #5e6e8c;
+$color-aux: #b4cff2;
 $color-blue: #3b8bfd;
 $color-grey: #a1a4b2;
 $font-main: "Open Sans", sans-serif;
 $font-size-global: 14px;
 $font-size-sm: 13px;
 $font-size-lg: 90px;
+$transition-global: all 150ms linear;
 
 /*-----------------------
 GLOBAL
@@ -178,7 +180,7 @@ BUTTONS
   font-family: $font-main;
   color: $color-primary;
   cursor: pointer;
-  transition: all 150ms linear;
+  transition: $transition-global;
 }
 
 .btn--nav {
@@ -191,7 +193,7 @@ BUTTONS
 .btn--add {
   position: relative;
   top: -6px;
-  color: #5e6e8c;
+  color: $color-secondary;
   padding: 10px;
   &:hover {
     color: $color-primary;
@@ -209,7 +211,7 @@ BUTTONS
   height: 1.5px;
   top: 16px;
   right: 5px;
-  background-color: #5e6e8c;
+  background-color: $color-secondary;
 }
 
 .plus::after {
@@ -220,7 +222,7 @@ BUTTONS
   right: 6.25px;
   width: 1.5px;
   height: 14px;
-  background-color: #5e6e8c;
+  background-color: $color-secondary;
 }
 
 .btn--search {
@@ -237,7 +239,7 @@ BUTTONS
   width: 100px;
   fill: red;
   transform: scale(0.1);
-  transition: all 250ms linear;
+  transition: $transition-global;
 }
 
 .btn--favorites {
@@ -245,7 +247,6 @@ BUTTONS
   padding-left: 45px;
   border-radius: 17px;
   border: solid 1px rgba(255, 255, 255, 0.6);
-  transition: all 150ms linear;
 
   &:hover {
     background-image: linear-gradient(258deg, #933aaf, #e63c56);
@@ -292,7 +293,7 @@ NAVBAR
   display: inline-block;
   width: 14px;
   height: 2px;
-  background-color: #5e6e8c;
+  background-color: $color-secondary;
 }
 .bars::before {
   content: "";
@@ -302,7 +303,7 @@ NAVBAR
   left: 0;
   width: 10px;
   height: 2px;
-  background-color: #5e6e8c;
+  background-color: $color-secondary;
 }
 
 .bars::after {
@@ -313,7 +314,7 @@ NAVBAR
   left: 0;
   width: 6px;
   height: 2px;
-  background-color: #5e6e8c;
+  background-color: $color-secondary;
 }
 
 .menu:nth-of-type(1) {
@@ -334,7 +335,7 @@ NAVBAR
 .menu__link {
   padding: 10px 0;
   display: inline-block;
-  color: $color-secondary;
+  color: $color-aux;
   transition: background-color 100ms linear;
   &:hover {
     color: $color-primary;
@@ -435,7 +436,7 @@ Encabezado
   a {
     display: inline-block;
     padding: 12px 0;
-    border-bottom: 1px transparent $color-blue;
+    border-bottom: 1px solid transparent;
     text-decoration: none;
     color: $color-primary;
     &:hover {
@@ -592,7 +593,7 @@ LISTA DE CANCIONES
 }
 
 .bar4 {
-  left: 12px;
+  left: 11px;
   animation: playing 2s linear infinite 185ms;
 }
 
@@ -635,7 +636,7 @@ GALERY
   align-content: flex-end;
   margin-bottom: 25px;
   padding: 0 11px;
-  transition: all 150s linear;
+  transition: $transition-global;
 }
 
 .galery__list::after {
@@ -728,6 +729,10 @@ PLAYER
   width: 30px;
   height: 30px;
   color: $color-grey;
+  &:hover{
+    color:$color-primary;
+    transform: scale(1.1);
+  }
 }
 
 .btn--player + .btn--player{
@@ -762,7 +767,7 @@ PLAYER
   display: flex;
   justify-content: flex-start;
   height: 3px;
-  opacity: 0.5;
+  opacity: 0.17;
   border-radius: 3px;
   background-color: $color-grey;
 }
@@ -788,7 +793,7 @@ PLAYER
 .controls-progress__bar{
   flex: 1 0 auto;
   height: 3px;
-  opacity: 0.5;
+  opacity: 0.17;
   border-radius: 3px;
   background-color: $color-grey;
 }
@@ -806,6 +811,10 @@ PLAYER
 
 .podcast{
   fill: $color-grey;
+  transition: $transition-global;
+  &:hover{
+    fill: $color-primary;
+  }
 }
 
 .controls-progress__detail{
