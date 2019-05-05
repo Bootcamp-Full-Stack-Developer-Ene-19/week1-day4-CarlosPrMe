@@ -15,10 +15,11 @@
     <div class="grid">
         <main class="main">
             <form action="#" class="form">
-                <div class="form_group">
+                <div class="form_group form_group--search">
                     <button type="submit" class="btn btn--search"><i class="lupa fa fa-search" aria-hidden="true"></i>
                     </button>
-                    <input class="form__control form__control--search" type="search" id="search" placeholder="Type here to search">
+                    <input class="form__control form__control--search" type="search" id="search"
+                        placeholder="Type here to search">
                 </div>
             </form>
             <header class="header">
@@ -36,7 +37,7 @@
                     Save to My stars</button>
                 <h1 class="header__heading">Gorillaz</h1>
                 <ul class="header__info">
-                    <li class="header__link"><a class="" href="#">Albums</a></li>
+                    <li class="header__link"><a class="header__link--selected" href="#">Albums</a></li>
                     <li class="header__link"><a class="" href="#">About</a></li>
                     <li class="header__link"><a class="" href="#">Related artists</a></li>
                 </ul>
@@ -103,15 +104,15 @@
                 </button>
             </div>
             <ul class="menu">
-                <li class="menu__item"><span class="item-selected item-selected--green"></span><a href="#"
-                        class="menu__link">UPlabs
+                <li class="menu__item"><a href="#"
+                        class="menu__link menu__link-selected menu__link-selected--green">UPlabs
                         focus</a></li>
-                <li class="menu__item"><span class=""></span><a href="#" class="menu__link">Golden 80s</a></li>
-                <li class="menu__item"><span class="item-selected item-selected--orange"></span><a href="#"
-                        class="menu__link">Gaming OSTs</a></li>
-                <li class="menu__item"><span class=""></span><a href="#" class="menu__link">Playlist title</a></li>
-                <li class="menu__item"><span class="item-selected item-selected--purple"></span><a href="#"
-                        class="menu__link">Smash it!</a>
+                <li class="menu__item"><a href="#" class="menu__link">Golden 80s</a></li>
+                <li class="menu__item"><a href="#"
+                        class="menu__link menu__link-selected menu__link-selected--orange">Gaming <br><span class="margin-left">OSTs</span></a></li>
+                <li class="menu__item"><a href="#" class="menu__link padding-top-0">Playlist title</a></li>
+                <li class="menu__item"><a href="#"
+                        class="menu__link menu__link-selected menu__link-selected--purple">Smash it!</a>
                 </li>
             </ul>
         </nav>
@@ -202,14 +203,14 @@
             <span class="controls-progress__detail">4:03</span>
         </div>
         <div class="controls-aditionals">
-                <button type="button" class="btn btn--player"><svg class="podcast" xmlns="http://www.w3.org/2000/svg"
-                        width="17" height="12" viewBox="0 0 17 12">
-                        <path fill-rule="nonzero"
-                            d="M2.224 1.218a.92.92 0 0 1 1.3.003.92.92 0 0 1 .004 1.3c-2.148 2.15-2.139 5.643.022 7.803a.92.92 0 0 1 .004 1.3.92.92 0 0 1-1.3-.003c-2.882-2.88-2.895-7.538-.03-10.403zm2.52 1.838a.92.92 0 0 1 1.301.004.92.92 0 0 1 .004 1.3 2.759 2.759 0 0 0 .01 3.902.92.92 0 0 1 .004 1.3.92.92 0 0 1-1.3-.003c-1.8-1.8-1.809-4.712-.018-6.503zm9.814 8.569a.92.92 0 0 1-1.3-.004.92.92 0 0 1-.004-1.3c2.148-2.149 2.139-5.642-.022-7.803a.92.92 0 0 1-.004-1.3.92.92 0 0 1 1.3.003c2.882 2.881 2.895 7.539.03 10.404zm-2.534-2.063a.92.92 0 0 1-1.3-.003.92.92 0 0 1-.004-1.3 2.759 2.759 0 0 0-.011-3.902.92.92 0 0 1-.004-1.3.92.92 0 0 1 1.3.003c1.801 1.8 1.81 4.712.019 6.502zM8.39 8.312a1.84 1.84 0 0 1-1.834-1.844 1.84 1.84 0 0 1 1.834-1.845 1.84 1.84 0 0 1 1.834 1.845 1.84 1.84 0 0 1-1.834 1.844z" />
-                    </svg>
-                </button>
-                <button type="button" class="btn btn--player"><i class="fa fa-list" aria-hidden="true"></i></button>
-            </div>
+            <button type="button" class="btn btn--player"><svg class="podcast" xmlns="http://www.w3.org/2000/svg"
+                    width="17" height="12" viewBox="0 0 17 12">
+                    <path fill-rule="nonzero"
+                        d="M2.224 1.218a.92.92 0 0 1 1.3.003.92.92 0 0 1 .004 1.3c-2.148 2.15-2.139 5.643.022 7.803a.92.92 0 0 1 .004 1.3.92.92 0 0 1-1.3-.003c-2.882-2.88-2.895-7.538-.03-10.403zm2.52 1.838a.92.92 0 0 1 1.301.004.92.92 0 0 1 .004 1.3 2.759 2.759 0 0 0 .01 3.902.92.92 0 0 1 .004 1.3.92.92 0 0 1-1.3-.003c-1.8-1.8-1.809-4.712-.018-6.503zm9.814 8.569a.92.92 0 0 1-1.3-.004.92.92 0 0 1-.004-1.3c2.148-2.149 2.139-5.642-.022-7.803a.92.92 0 0 1-.004-1.3.92.92 0 0 1 1.3.003c2.882 2.881 2.895 7.539.03 10.404zm-2.534-2.063a.92.92 0 0 1-1.3-.003.92.92 0 0 1-.004-1.3 2.759 2.759 0 0 0-.011-3.902.92.92 0 0 1-.004-1.3.92.92 0 0 1 1.3.003c1.801 1.8 1.81 4.712.019 6.502zM8.39 8.312a1.84 1.84 0 0 1-1.834-1.844 1.84 1.84 0 0 1 1.834-1.845 1.84 1.84 0 0 1 1.834 1.845 1.84 1.84 0 0 1-1.834 1.844z" />
+                </svg>
+            </button>
+            <button type="button" class="btn btn--player"><i class="fa fa-list" aria-hidden="true"></i></button>
+        </div>
     </footer>
 
 </body>
